@@ -4,6 +4,7 @@
 [![docs](https://readthedocs.org/projects/drift-drought/badge/?version=latest)](https://drift-drought.readthedocs.io)
 [![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24409548.svg)](https://doi.org/10.5281/zenodo.24409548)
 
 **DRIFT** (*Drought Regions Identified From the space–time component Tree*) detects drought events in gridded
 standardized indices (SPI, SPEI, soil-moisture percentiles) **without fixing a single threshold**. It builds the
@@ -197,8 +198,10 @@ gallery and the full API reference generated from the docstrings.
 
 ## Citation
 
-If you use DRIFT, please cite the software (Zenodo DOI of the version) and the article (see `CITATION.cff`, or
-"Cite this repository" on GitHub):
+If you use DRIFT, please cite the software and the article (see `CITATION.cff`, or "Cite this repository" on GitHub):
+
+> Sanchez H., K. A. (2026). *DRIFT: Drought Regions Identified From the space–time component Tree* (software).
+> Zenodo. https://doi.org/10.5281/zenodo.24409548 (all versions; version 0.1.1: https://doi.org/10.5281/zenodo.24409549)
 
 > Sanchez H., K. A. (2026). DRIFT for detecting and tracking spatiotemporal drought events with component trees.
 > *Water Resources Research* (submitted).
