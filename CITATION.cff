@@ -8,6 +8,7 @@ repository-code: "https://github.com/TODO/drift-drought"
 authors:
   - family-names: "Sanchez H."
     given-names: "Karel A."
+    orcid: "https://orcid.org/0000-0002-4961-9694"
 keywords: [drought, event detection, component tree, topological persistence, tracking]
 preferred-citation:
   type: article
@@ -15,5 +16,6 @@ preferred-citation:
   authors:
     - family-names: "Sanchez H."
       given-names: "Karel A."
+      orcid: "https://orcid.org/0000-0002-4961-9694"
   journal: "Water Resources Research (submitted)"
   year: 2026

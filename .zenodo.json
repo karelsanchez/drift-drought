@@ -2,7 +2,18 @@
   "title": "DRIFT: Drought Regions Identified From the space-time component Tree",
   "upload_type": "software",
   "license": "MIT",
-  "creators": [{"name": "Sanchez H., Karel A."}],
-  "keywords": ["drought", "event detection", "component tree", "topological persistence", "tracking"],
+  "creators": [
+    {
+      "name": "Sanchez H., Karel A.",
+      "orcid": "0000-0002-4961-9694"
+    }
+  ],
+  "keywords": [
+    "drought",
+    "event detection",
+    "component tree",
+    "topological persistence",
+    "tracking"
+  ],
   "description": "Python package to detect, characterize and evaluate space-time drought events selected from the component tree of a deficit field (volume-weighted topological persistence, noise-adaptive threshold, lineage inheritance), with the synthetic benchmark, reference detectors, tracking metrics, event confidence and surrogate significance."
 }
