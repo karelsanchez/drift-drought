@@ -4,7 +4,7 @@ title: "DRIFT: Drought Regions Identified From the space-time component Tree"
 version: 0.1.0
 date-released: 2026-11-20
 license: MIT
-repository-code: "https://github.com/TODO/drift-drought"
+repository-code: "https://github.com/karelsanchez/drift-drought"
 authors:
   - family-names: "Sanchez H."
     given-names: "Karel A."

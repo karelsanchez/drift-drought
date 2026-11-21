@@ -15,7 +15,7 @@ event confidence and a surrogate significance test.
 ## Installation
 
 ```bash
-pip install git+https://github.com/TODO/drift-drought
+pip install git+https://github.com/karelsanchez/drift-drought
 ```
 
 Python ≥ 3.10. Dependencies: NumPy, SciPy, pandas, Higra, Numba, scikit-image, scikit-learn, xarray.
