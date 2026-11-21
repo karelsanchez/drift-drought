@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use DRIFT, please cite the software and the article below."
 title: "DRIFT: Drought Regions Identified From the space-time component Tree"
-version: 0.1.1
+version: 0.1.2
 date-released: 2026-11-21
 license: MIT
 doi: 10.5281/zenodo.24409548

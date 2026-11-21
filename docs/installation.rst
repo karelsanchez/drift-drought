@@ -5,7 +5,7 @@ DRIFT needs Python 3.10 or newer.
 
 .. code-block:: bash
 
-   pip install drift-drought            # once published on PyPI
+   pip install drift-drought
    pip install git+https://github.com/karelsanchez/drift-drought   # development version
 
 Optional extras: ``[plot]`` (matplotlib, for the examples), ``[test]`` (pytest), ``[docs]`` (Sphinx).

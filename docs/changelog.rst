@@ -1,6 +1,12 @@
 Changelog
 =========
 
+0.1.2 (2026-11-21)
+------------------
+
+First release on PyPI (``pip install drift-drought``), published from GitHub Actions with trusted publishing.
+Zenodo DOI added to the README, ``CITATION.cff`` and the documentation.
+
 0.1.1 (2026-11-21)
 ------------------
 
