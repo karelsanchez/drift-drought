@@ -2,7 +2,7 @@
 
 [![tests](https://github.com/karelsanchez/drift-drought/actions/workflows/tests.yml/badge.svg)](https://github.com/karelsanchez/drift-drought/actions/workflows/tests.yml)
 [![docs](https://readthedocs.org/projects/drift-drought/badge/?version=latest)](https://drift-drought.readthedocs.io)
-[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/karelsanchez/drift-drought/blob/main/LICENSE)
 ![python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24409548.svg)](https://doi.org/10.5281/zenodo.24409548)
 
@@ -16,7 +16,7 @@ The package also provides everything needed to **test** a drought-event detector
 events (Gaussian scenarios and irregular shapes from real droughts), three reference detectors, tracking metrics
 (HOTA, object F1, partition agreement), event confidence and a surrogate significance test.
 
-![Quickstart](docs/_static/quickstart.png)
+![Quickstart](https://raw.githubusercontent.com/karelsanchez/drift-drought/main/docs/_static/quickstart.png)
 
 ## Contents
 
@@ -36,7 +36,7 @@ A drought catalogue built by labelling connected cells below one threshold (for 
 threshold: a strict one breaks droughts into pieces, a lenient one chains separate droughts into multi-year objects.
 DRIFT keeps **all thresholds at once** in a component tree and lets each event take its own effective threshold:
 
-![One threshold versus the tree](docs/_static/concept_tree.png)
+![One threshold versus the tree](https://raw.githubusercontent.com/karelsanchez/drift-drought/main/docs/_static/concept_tree.png)
 
 *(a) Each threshold gives a different set of events. (b) In the tree, each maximum is a branch with a persistence
 P = peak − saddle; shallow branches created by noise are absorbed, droughts separated by deep saddles are kept.*
@@ -44,7 +44,7 @@ P = peak − saddle; shallow branches created by noise are absorbed, droughts se
 ## Installation
 
 ```bash
-pip install git+https://github.com/karelsanchez/drift-drought
+pip install drift-drought
 ```
 
 Python ≥ 3.10. Dependencies: NumPy, SciPy, pandas, [Higra](https://higra.readthedocs.io) (component trees), Numba,
@@ -80,7 +80,7 @@ episodes, info = dd.detect(x, area, v_min=2e6, floor=floor)    # km2 x months
 pulses, _ = dd.detect(x, area, v_min=2e6, floor=floor, selection="leaf")
 ```
 
-The complete script is [`examples/quickstart.py`](examples/quickstart.py).
+The complete script is [`examples/quickstart.py`](https://github.com/karelsanchez/drift-drought/blob/main/examples/quickstart.py).
 
 ## How it works
 
@@ -98,14 +98,14 @@ The complete script is [`examples/quickstart.py`](examples/quickstart.py).
 **Episodes and pulses.** `selection="persistence_vl"` (default) returns episodes; `selection="leaf"` returns the
 pulses nested in them:
 
-![Episodes and pulses](docs/_static/pulses_episodes.png)
+![Episodes and pulses](https://raw.githubusercontent.com/karelsanchez/drift-drought/main/docs/_static/pulses_episodes.png)
 
 **Event attributes.** `confidence.parameter_confidence` gives each event a confidence (mean best IoU with runs of
 perturbed parameters; with another precipitation product it becomes a *product confidence*), and
 `significance.surrogate_test` tests each event against phase-randomized surrogates of the field (family-wise and
 Benjamini–Hochberg p-values).
 
-![Floor selection](docs/_static/floor_scan.png)
+![Floor selection](https://raw.githubusercontent.com/karelsanchez/drift-drought/main/docs/_static/floor_scan.png)
 
 ## Evaluation metrics
 
@@ -128,7 +128,7 @@ Equations and interpretation: [metrics page of the documentation](https://drift-
 **real drought shapes** — from your own catalogue (`build_library`) or from the bundled library of 99 droughts of the
 Amazon and Orinoco basins (`example_library`) — so DRIFT can be tuned to the scale of the target region.
 
-![Benchmark scenarios](docs/_static/scenarios.png)
+![Benchmark scenarios](https://raw.githubusercontent.com/karelsanchez/drift-drought/main/docs/_static/scenarios.png)
 
 | Scenario | What it tests |
 |---|---|
@@ -141,7 +141,7 @@ Amazon and Orinoco basins (`example_library`) — so DRIFT can be tuned to the s
 Mini benchmark (`examples/make_figures.py`: four scenarios × two noise levels × ten seeds, configurations selected in
 the article):
 
-![Mini benchmark](docs/_static/mini_benchmark.png)
+![Mini benchmark](https://raw.githubusercontent.com/karelsanchez/drift-drought/main/docs/_static/mini_benchmark.png)
 
 | Method | HOTA (noise 0.3) | HOTA (noise 0.6) | AssA (0.6) | F1, IoU ≥ 0.25 (0.6) | Events detected (0.6; true 4.6) |
 |---|---|---|---|---|---|
@@ -208,4 +208,4 @@ If you use DRIFT, please cite the software and the article (see `CITATION.cff`, 
 
 ## License
 
-MIT © 2026 Karel A. Sanchez H. (see [LICENSE](LICENSE)).
+MIT © 2026 Karel A. Sanchez H. (see [LICENSE](https://github.com/karelsanchez/drift-drought/blob/main/LICENSE)).
