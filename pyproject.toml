@@ -9,7 +9,7 @@ description = "DRIFT: space-time drought events selected from the component tree
 readme = "README.md"
 license = { file = "LICENSE" }
 requires-python = ">=3.10"
-authors = [{ name = "Karel A. Sanchez H." }]
+authors = [{ name = "Karel A. Sanchez H.", email = "sanchezkarel@gmail.com" }]
 keywords = ["drought", "event detection", "component tree", "topological persistence", "tracking", "hydrology"]
 classifiers = [
     "Programming Language :: Python :: 3",
