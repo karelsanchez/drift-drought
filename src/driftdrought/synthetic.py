@@ -16,7 +16,7 @@ Truth: a cell belongs to event ``k`` if its clean deficit is ``>= support`` and 
 import numpy as np
 from scipy.ndimage import find_objects, gaussian_filter, zoom
 
-__all__ = ["SHAPE", "SCENARIOS", "generate", "build_library", "generate_irregular"]
+__all__ = ["SHAPE", "SCENARIOS", "generate", "build_library", "example_library", "generate_irregular"]
 
 SHAPE = (60, 60, 80)
 SCENARIOS = ("S1_isolated", "S2_advection", "S3_splitmerge", "S4_fragmented")
@@ -123,6 +123,22 @@ def build_library(labels, index, min_cells=200, sigma=1.0):
         if m.sum() >= min_cells:
             lib.append(np.where(m, d[sl], 0.0).astype(np.float32))
     return lib
+
+
+def example_library():
+    """Library of 99 real drought shapes from the Amazon and Orinoco basins.
+
+    The space–time deficits of the DRIFT pulses detected on SPEI-3, SPI-3 and soil-moisture index fields
+    (0.25°, monthly, 1981–2026; CHIRPS v3 and ERA5-Land), each cropped to its bounding box and reduced to at most
+    24 months × 32 × 40 cells. Use it with :func:`generate_irregular` when no catalogue of the target region exists.
+
+    Returns
+    -------
+    list of numpy.ndarray of float32
+    """
+    from pathlib import Path
+    z = np.load(Path(__file__).with_name("data") / "amazon_orinoco_pulses.npz")
+    return [z[k].astype(np.float32) for k in sorted(z.files, key=lambda s: int(s[1:]))]
 
 
 def generate_irregular(library, noise, seed, support=0.5, red_noise=False, n_events=(3, 6),

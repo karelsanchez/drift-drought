@@ -21,7 +21,10 @@ confidence and a surrogate significance test.
    installation
    quickstart
    concepts
+   metrics
    benchmark
+   testing
+   gallery
    api
    citing
    changelog

@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "drift-drought"
-version = "0.1.0"
+version = "0.1.1"
 description = "DRIFT: space-time drought events selected from the component tree of a deficit field"
 readme = "README.md"
 license = { file = "LICENSE" }

@@ -69,3 +69,10 @@ def test_surrogate_test_small(cube):
     labels, table = dd.significance.surrogate_test(dd.smooth(cube[0], 2.5), AREA, v_min=50, n_surrogates=3)
     assert set(table.columns) >= {"event", "score", "p_fw", "p_pool", "q_pool"}
     assert ((table.p_fw > 0) & (table.p_fw <= 1)).all()
+
+
+def test_example_library():
+    lib = dd.synthetic.example_library()
+    assert len(lib) == 99 and all(e.ndim == 3 and e.max() > 0 for e in lib)
+    idx, truth, meta = dd.synthetic.generate_irregular(lib, noise=0.3, seed=0)
+    assert idx.shape == dd.synthetic.SHAPE and meta["n_events"] == len(np.unique(truth[truth > 0]))

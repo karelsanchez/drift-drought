@@ -10,6 +10,9 @@ drought catalogue for one threshold :math:`\lambda`. The **max-tree** stores the
 upper level set :math:`\{d \ge \lambda\}` at once (26-connectivity in space and time); a fixed-threshold catalogue is
 one horizontal cut through it.
 
+.. image:: _static/concept_tree.png
+   :width: 100%
+
 A node :math:`n` is *significant* when its area-weighted space–time volume :math:`V(n) \ge v_{\min}` and its level
 :math:`\lambda(n) \ge \lambda_{\mathrm{floor}}`. Chains of significant nodes are condensed into clusters, which branch
 where two or more significant children appear.
